@@ -1,10 +1,11 @@
 import Formulario from './formulario';
+import Timer from './timer';
 
 function Navbar() {
   return (
     <nav style={{ background: 'black', color: 'white', padding: '10px' }}>
       <b>Navbar</b> Home Features Pricing About
-      <input placeholder="Search" />
+      <input placeholder="Search" style={{ background: 'white', color: 'black' }} />
       <button style={{ color: 'blue' }}>Search</button>
     </nav>
   );
@@ -24,6 +25,8 @@ export default function Home({ searchParams }: HomeProps) {
       </div>
 
       <Formulario searchParams={searchParams} />
+
+      <Timer />
     </div>
   );
 }
