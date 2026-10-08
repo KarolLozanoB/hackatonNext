@@ -1,5 +1,6 @@
 import Formulario from './formulario';
 import Timer from './timer';
+import Barra from './barra';
 
 function Navbar() {
   return (
@@ -27,6 +28,8 @@ export default function Home({ searchParams }: HomeProps) {
       <Formulario searchParams={searchParams} />
 
       <Timer />
+
+      <Barra />
     </div>
   );
 }
