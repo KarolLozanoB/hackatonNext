@@ -1,3 +1,5 @@
+import Formulario from './formulario';
+
 function Navbar() {
   return (
     <nav style={{ background: 'black', color: 'white', padding: '10px' }}>
@@ -8,7 +10,11 @@ function Navbar() {
   );
 }
 
-export default function Home() {
+type HomeProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default function Home({ searchParams }: HomeProps) {
   return (
     <div>
       <Navbar />
@@ -16,6 +22,8 @@ export default function Home() {
       <div style={{ transform: 'rotateY(180deg)' }}>
         <Navbar />
       </div>
+
+      <Formulario searchParams={searchParams} />
     </div>
   );
 }
